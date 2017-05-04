@@ -137,11 +137,11 @@
 	"\/src\/assets\/GreenSock-older\/src\/minified\/plugins\/DrawSVGPlugin.min.js": {
 		"ft": 64,
 		"mi": 0,
-		"oA": 1,
-		"oAP": "\/dist\/assets\/GreenSock-older\/src\/minified\/plugins\/DrawSVGPlugin.min.js",
-		"oF": 1,
-		"sC": 1,
-		"tS": 1
+		"oA": 2,
+		"oAP": "\/dist\/js\/DrawSVGPlugin.min.js",
+		"oF": 3,
+		"sC": 0,
+		"tS": 0
 		},
 	"\/src\/assets\/GreenSock-older\/src\/minified\/plugins\/EaselPlugin.min.js": {
 		"ft": 64,
@@ -173,11 +173,11 @@
 	"\/src\/assets\/GreenSock-older\/src\/minified\/plugins\/MorphSVGPlugin.min.js": {
 		"ft": 64,
 		"mi": 0,
-		"oA": 1,
-		"oAP": "\/dist\/assets\/GreenSock-older\/src\/minified\/plugins\/MorphSVGPlugin.min.js",
-		"oF": 1,
-		"sC": 1,
-		"tS": 1
+		"oA": 2,
+		"oAP": "\/dist\/js\/MorphSVGPlugin.min.js",
+		"oF": 3,
+		"sC": 0,
+		"tS": 0
 		},
 	"\/src\/assets\/GreenSock-older\/src\/minified\/plugins\/Physics2DPlugin.min.js": {
 		"ft": 64,
@@ -1181,11 +1181,11 @@
 		"sC": 1,
 		"tS": 1
 		},
-	"\/src\/assets\/nerdmanship\/js\/particle.js": {
+	"\/src\/assets\/nerdmanship\/js\/particles.js": {
 		"ft": 64,
 		"mi": 0,
 		"oA": 1,
-		"oAP": "\/dist\/assets\/nerdmanship\/js\/particle.js",
+		"oAP": "\/dist\/assets\/nerdmanship\/js\/particles.js",
 		"oF": 1,
 		"sC": 1,
 		"tS": 1
@@ -1213,11 +1213,56 @@
 		"oAP": "\/dist\/favicon.ico",
 		"oF": 0
 		},
+	"\/src\/js\/cacheDOM.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/dist\/js\/cacheDOM.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 1
+		},
+	"\/src\/js\/data.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/dist\/js\/data.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 1
+		},
 	"\/src\/js\/index.js": {
 		"ft": 64,
 		"mi": 0,
 		"oA": 0,
 		"oAP": "\/dist\/js\/index.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 1
+		},
+	"\/src\/js\/playTimeline.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/dist\/js\/playTimeline.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 1
+		},
+	"\/src\/js\/setStart.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/dist\/js\/setStart.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 1
+		},
+	"\/src\/js\/wecon-particles.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/dist\/js\/wecon-particles.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 1
@@ -1284,13 +1329,57 @@
 "hooks": [
 	],
 "manualImportLinks": {
+	"\/src\/js\/index.js": [
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/src\/js\/cacheDOM.js",
+			"position": 0,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/src\/js\/data.js",
+			"position": 1,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/src\/assets\/nerdmanship\/js\/utility.js",
+			"position": 2,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/src\/assets\/nerdmanship\/js\/particles.js",
+			"position": 3,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/src\/js\/wecon-particles.js",
+			"position": 4,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/src\/js\/setStart.js",
+			"position": 5,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/src\/js\/playTimeline.js",
+			"position": 6,
+			"type": 0
+			}
+		]
 	},
 "projectAttributes": {
 	"creationDate": 515490881,
 	"displayValue": "wecon",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-girlfriend",
-	"lastBuiltDate": 515492913
+	"lastBuiltDate": 515500829
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

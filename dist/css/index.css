@@ -4,3 +4,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 30px; }
+
+svg {
+  background-color: #eee;
+  width: 500px; }
