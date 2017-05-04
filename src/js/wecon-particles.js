@@ -107,7 +107,7 @@ function animateParticleSmartphone() {
       .to(target, 0.7, { x: obj.sp.xMax*0.8, y: obj.sp.yMax*0.8, scale: obj.sp.sMax, ease: Power4.easeOut }, "start")
       
       // Act
-      .to(target, 1.5, { x: "+=30", ease: Power1.easeIn })
+      .to(target, 1.5, { x: "+=20", ease: Power1.easeIn })
       
       // Out
       .to(target, 0.3, { y: 100, ease: Power1.easeIn }, "start =+2")
@@ -131,7 +131,7 @@ function animateParticleHeart() {
       
       // Act
       .to(target, 1.3, { x: obj.h.xMax*0.85, y: obj.h.yMax*0.85, ease: Power1.easeIn })
-      .to(target, 0.2, { scale: "+=0.2", repeat: 1, yoyo:true, ease: Power1.easeOut, repeatDelay: 0.05 }, "start =+1.5")
+      .to(target, 0.2, { scale: "+=0.2", repeat: 1, yoyo:true, ease: Power1.easeOut, repeatDelay: 0.05 }, "start =+1.15")
       
       // Out
       .to(target, 0.3, { y: 100, ease: Power1.easeIn }, "start =+2")

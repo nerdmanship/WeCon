@@ -15,23 +15,59 @@
     <section id="header">
       <svg id="svg" xmlns="http://www.w3.org/2000/svg" width="1110" height="300" viewbox="0 0 1110 300" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
-          <mask id="mask" fill="#fff">
-            <path id="path-1" fill="#FFF" d="M0 0h495v386H0z"></path>
-          </mask>
+          <g data-paths>
+            <path id="data-stream" fill="#3EBEE0" d="M86.057 7.015h94.578c1.933 0 3.5-1.567 3.5-3.5s-1.567-3.5-3.5-3.5H86.057c-1.933 0-3.5 1.567-3.5 3.5s1.567 3.5 3.5 3.5z"></path>
+            <path id="data-mask" d="M4.057 7.015h15c1.933 0 3.5-1.567 3.5-3.5s-1.567-3.5-3.5-3.5h-15c-1.933 0-3.5 1.567-3.5 3.5s1.567 3.5 3.5 3.5zm30 0h15c1.933 0 3.5-1.567 3.5-3.5s-1.567-3.5-3.5-3.5h-15c-1.933 0-3.5 1.567-3.5 3.5s1.567 3.5 3.5 3.5zm30 0h15c1.933 0 3.5-1.567 3.5-3.5s-1.567-3.5-3.5-3.5h-15c-1.933 0-3.5 1.567-3.5 3.5s1.567 3.5 3.5 3.5z"></path>
+          </g>
+          <g data-masks>
+            <mask id="stream1" fill="#fff">
+              <use id="maskStream1" xlink:href="#data-mask"></use>
+            </mask>
+            <mask id="stream2" fill="#fff">
+              <use id="maskStream2" xlink:href="#data-mask"></use>
+            </mask>
+            <mask id="stream3" fill="#fff">
+              <use id="maskStream3" xlink:href="#data-mask"></use>
+            </mask>
+            <mask id="stream4" fill="#fff">
+              <use id="maskStream4" xlink:href="#data-mask"></use>
+            </mask>
+            <mask id="mask" fill="#fff">
+              <path id="text-mask" fill="#FFF" d="M0 0h495v386H0z"></path>
+            </mask>
+          </g>
         </defs>
         <g id="all">
           <g id="symbol">
             <g id="lineart" stroke-width="4.66" stroke="#000" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
               <path id="line"></path>
             </g>
-            <g id="details" stroke-width="2.33" opacity="0">
-              <g id="logo">
-                <path id="left" d="M151.132 275.867v-234.5"></path>
-                <path id="right" d="M444.367 285.667v-244.3"></path>
+            <g id="details" stroke-width="2.33" opacity="0" stroke-linecap="round" stroke-linejoin="round">
+              <g id="logo" stroke="#000">
+                <path id="logoline1" d="M151.132 275.867v-234.5"></path>
+                <path id="logoline2" d="M444.367 285.667v-244.3"></path>
               </g>
-              <g id="heart"></g>
-              <g id="smartphone"></g>
-              <g id="blueprint"></g>
+              <g id="heart" fill="none" stroke="#000">
+                <path id="heartline1" d="M379.364 212.48c-9.597 13.995-21.15 28.478-33.338 41.02"></path>
+                <path id="heartline2" d="M199.66 150c0-33.78 27.13-53.4 49.188-52.497"></path>
+              </g>
+              <g id="smartphone">
+                <g id="data-stream">
+                  <use xlink:href="#data-stream" mask="url(#stream1)" transform="translate(295 166)"></use>
+                  <use xlink:href="#data-stream" mask="url(#stream2)" transform="translate(284 206)"></use>
+                  <use xlink:href="#data-stream" mask="url(#stream3)" transform="translate(271 246)"></use>
+                  <use xlink:href="#data-stream" mask="url(#stream4)" transform="translate(50 190)"></use>
+                </g>
+              </g>
+              <g id="blueprint">
+                <g id="quality-particle" transform="translate(282 1)">
+                  <circle id="particle" cx="39" cy="39" r="39" fill="#3EE09E"></circle>
+                  <g id="check" stroke="#FFF" stroke-width="10.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path id="Path-10-Copy" d="M32.87 59.87l24.822-37.82"></path>
+                    <path id="Path-10-Copy-2" d="M32.05 59.89 19.39 36.23"></path>
+                  </g>
+                </g>
+              </g>
             </g>
             <g id="particles"></g>
           </g>

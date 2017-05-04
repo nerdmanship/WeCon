@@ -6,13 +6,15 @@ var svg = document.querySelector("#svg"),
   particleContainer = svg.querySelector("#particles"),
   text0 = svg.querySelector("#WE"),
   text1 = svg.querySelector("#Construction"),
-  mask = svg.querySelector("#path-1");
-/*
-var particle1 = svg.querySelector("#particle1"),
-  particle2 = svg.querySelector("#particle2"),
-  particle3 = svg.querySelector("#particle3"),
-  particle4 = svg.querySelector("#particle4"),
-  particle5 = svg.querySelector("#particle5"),
-  particle6 = svg.querySelector("#particle6"),
-  particle7 = svg.querySelector("#particle7"),
-  particles = [particle1, particle2, particle3, particle4, particle5, particle6, particle7];*/
+  mask = svg.querySelector("#text-mask"),
+  maskStream1 = svg.querySelector("#maskStream1"),
+  maskStream2 = svg.querySelector("#maskStream2"),
+  maskStream3 = svg.querySelector("#maskStream3"),
+  maskStream4 = svg.querySelector("#maskStream4"),
+  heartline1 = svg.querySelector("#heartline1"),
+  heartline2 = svg.querySelector("#heartline2"),
+  logoline1 = svg.querySelector("#logoline1"),
+  logoline2 = svg.querySelector("#logoline2"),
+  
+
+  qualityParticle = svg.querySelector("#quality-particle");

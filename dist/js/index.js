@@ -8,16 +8,16 @@ var svg = document.querySelector("#svg"),
     particleContainer = svg.querySelector("#particles"),
     text0 = svg.querySelector("#WE"),
     text1 = svg.querySelector("#Construction"),
-    mask = svg.querySelector("#path-1");
-/*
-var particle1 = svg.querySelector("#particle1"),
-  particle2 = svg.querySelector("#particle2"),
-  particle3 = svg.querySelector("#particle3"),
-  particle4 = svg.querySelector("#particle4"),
-  particle5 = svg.querySelector("#particle5"),
-  particle6 = svg.querySelector("#particle6"),
-  particle7 = svg.querySelector("#particle7"),
-  particles = [particle1, particle2, particle3, particle4, particle5, particle6, particle7];*/
+    mask = svg.querySelector("#text-mask"),
+    maskStream1 = svg.querySelector("#maskStream1"),
+    maskStream2 = svg.querySelector("#maskStream2"),
+    maskStream3 = svg.querySelector("#maskStream3"),
+    maskStream4 = svg.querySelector("#maskStream4"),
+    heartline1 = svg.querySelector("#heartline1"),
+    heartline2 = svg.querySelector("#heartline2"),
+    logoline1 = svg.querySelector("#logoline1"),
+    logoline2 = svg.querySelector("#logoline2"),
+    qualityParticle = svg.querySelector("#quality-particle");
 "use strict";
 
 // Path data
@@ -30,6 +30,10 @@ var heart = "M3.358 293.042s267.01-3.986 266.676-4.846c-34.967-22.367-75.94-78.0
 var beat = "M3.358 293.042s276.2-4.56 276.178-4.62c-34.967-22.368-76.443-78.314-86.91-107.726-14.108-39.642-2.208-95.946 36.636-103.867 38.844-7.922 59.478 14.58 67.738 28.304 8.343-13.725 34.713-37.296 71.74-28.19 37.025 9.106 51.058 64.24 36.635 103.867-10.34 28.407-50.887 84.085-86.567 107.61l271.423-4.57";
 var logo = "M3 292.9h64.982c3.727 0 6.522-3.033 6.522-6.533V53.033c0-4.2 3.726-6.533 7.686-7.7L149.734 16.4c.7 0 1.398-.233 1.863-.233l42.623 8.166c4.193 1.4 7.686 3.5 7.686 7.7v238.934c0 2.1 1.63 3.733 3.727 3.733l26.086 2.333c2.095 0 3.726-1.633 3.726-3.733V116.733c0-4.2 3.493-7.7 7.686-7.7l73.6-4.2 25.853.234c4.192 0 7.686 3.5 7.686 7.7V288c0 2.1 1.63 3.733 3.727 3.733l31.21 2.334c2.097 0 3.727-1.634 3.727-3.734V22c0-4.2 3.494-7.7 7.686-7.7l46.815-4.433c.7 0 1.165 0 1.864.233l69.173 34.067c2.33 1.166 3.727 3.5 3.727 5.833v227.033c0 3.734 3.028 6.534 6.522 6.534h65.68";
 var logoFoundation = "M3 292.9l67.28-1.07 2.223-.034 2.167-.035 2.267-.035 73.776-1.172 1.708-.027 47.71-.758 1.733-.028 1.512-.024 1.617-.025 28.57-.453 1.61-.026 1.616-.025 1.557-.024 78.526-1.247 29.387-.467 1.833-.03 2.128-.033 1.732-.028 33.64-.534 2.918-.045 3.36-.054 2.513-.04 47.986-.76 2.876-.047 67.978-1.08 2.378-.038 2.705-.043 3.202-.05 68.898-1.095";
+
+var beatline1 = 'M371.364 206.48c-9.597 13.995-21.15 28.478-33.338 41.02';
+var beatline2 = 'M207.66 146c0-33.78 14.513-57.693 36.572-56.79';
+var beatline3 = 'M265.57 97.935c3.258 3.128 5.71 7.094 7.03 11.877';
 
 var colors = {
   successGreen: "#3EE09E",
@@ -47,7 +51,7 @@ var p = [{
   },
   sp: {
     xMax: random(-125, -175),
-    yMax: random(0, 40),
+    yMax: random(30, 50),
     sMax: random(0.5, 1),
     fill: colors.dataBlue
   },
@@ -113,7 +117,7 @@ var p = [{
   },
   h: {
     xMax: random(-110, -90),
-    yMax: random(-165, -200),
+    yMax: random(-165, -175),
     sMax: random(0.3, 0.6),
     fill: colors.heartRed
   }
@@ -363,7 +367,7 @@ function animateParticleSmartphone() {
     .to(target, 0.7, { x: obj.sp.xMax * 0.8, y: obj.sp.yMax * 0.8, scale: obj.sp.sMax, ease: Power4.easeOut }, "start")
 
     // Act
-    .to(target, 1.5, { x: "+=30", ease: Power1.easeIn })
+    .to(target, 1.5, { x: "+=20", ease: Power1.easeIn })
 
     // Out
     .to(target, 0.3, { y: 100, ease: Power1.easeIn }, "start =+2").to(target, 0.1, { autoAlpha: 0 }, "start =+2.2");
@@ -383,7 +387,7 @@ function animateParticleHeart() {
     .to(target, 0.7, { x: obj.h.xMax * 0.95, y: obj.h.yMax * 0.95, scale: obj.h.sMax, ease: Power4.easeOut }, "start")
 
     // Act
-    .to(target, 1.3, { x: obj.h.xMax * 0.85, y: obj.h.yMax * 0.85, ease: Power1.easeIn }).to(target, 0.2, { scale: "+=0.2", repeat: 1, yoyo: true, ease: Power1.easeOut, repeatDelay: 0.05 }, "start =+1.5")
+    .to(target, 1.3, { x: obj.h.xMax * 0.85, y: obj.h.yMax * 0.85, ease: Power1.easeIn }).to(target, 0.2, { scale: "+=0.2", repeat: 1, yoyo: true, ease: Power1.easeOut, repeatDelay: 0.05 }, "start =+1.15")
 
     // Out
     .to(target, 0.3, { y: 100, ease: Power1.easeIn }, "start =+2").to(target, 0.1, { autoAlpha: 0 }, "start =+2.2");
@@ -392,20 +396,64 @@ function animateParticleHeart() {
 "use strict";
 
 function setStart() {
+  var lines = [heartline1, heartline2, logoline1, logoline2];
 
   TweenMax.set(line, { attr: { d: blueprintFoundation } });
   TweenMax.set([text0, text1], { x: -500, autoAlpha: 1 });
   TweenMax.set(symbol, { scale: 1.5, transformOrigin: "bottom left", x: 110 });
   TweenMax.set(mask, { x: 350 });
-  TweenMax.set(details, { autoAlpha: 0 });
+  TweenMax.set(details, { autoAlpha: 1 });
+  TweenMax.set(qualityParticle, { scale: 0, y: 20, transformOrigin: "bottom center" });
+  TweenMax.set(lines, { drawSVG: "0%" });
+  TweenMax.set(heartline2, { drawSVG: "100% 100%" });
 }
 "use strict";
 
 function playTimeline() {
+    // Arrays
+    var heartlines = [heartline1, heartline2];
+    var beatlines = [beatline1, beatline2];
+    var logolines = [logoline1, logoline2];
 
-  var tl = new TimelineMax({}).timeScale(1);
+    var tl = new TimelineMax({}).timeScale(1);
 
-  tl.add("intro").from(line, 0.8, { drawSVG: "0", ease: Power2.easeIn }, "intro").add("blueprint").add(setParticleBlueprint).to(line, 0.8, { morphSVG: blueprint, ease: Back.easeOut }, "blueprint").add(animateParticleBlueprint, "blueprint =+0.05").to(line, 0.5, { morphSVG: blueprintFoundation, ease: Back.easeIn }, "blueprint =+1.8").add("smartphone").add(setParticleSmartphone).set(line, { morphSVG: smartphoneFoundation }).to(line, 0.8, { morphSVG: smartphone, ease: Back.easeOut }, "smartphone").add(animateParticleSmartphone, "smartphone =+0.05").to(line, 0.5, { morphSVG: smartphoneFoundation, ease: Back.easeIn }, "smartphone =+1.8").add("heart").add(setParticleHeart).set(line, { morphSVG: heartFoundation }).to(line, 0.8, { morphSVG: heart, ease: Back.easeOut }, "heart").add(animateParticleHeart, "heart =+0.05").to(line, 0.5, { morphSVG: heartFoundation, ease: Back.easeIn }, "heart =+1.8").set(line, { morphSVG: logoFoundation }).to(line, 2, { morphSVG: logo, ease: Power4.easeOut }).add("gopro", "=-1.3").to(mask, 0.7, { x: 0, ease: Power3.easeIn }, "gopro").to(symbol, 0.7, { x: 0, scale: 1, ease: Power3.easeIn }, "gopro").to(text0, 0.7, { x: 0, ease: Power3.easeIn }, "gopro").to(text1, 0.7, { x: 0, ease: Power3.easeIn }, "gopro");
+    tl.add("intro").from(line, 0.8, { drawSVG: "0", ease: Power2.easeIn }, "intro")
+
+    // Up BLUEPRINT
+    .add("blueprint").add(setParticleBlueprint).to(line, 0.8, { morphSVG: blueprint, ease: Back.easeOut }, "blueprint").add(animateParticleBlueprint, "blueprint =+0.05")
+
+    // Quality particle BLUEPRINT
+    .to(qualityParticle, 0.4, { scale: 1, repeat: 1, yoyo: true, ease: Power2.easeOut }, "blueprint =+1.4").to(qualityParticle, 0.4, { y: "-=30", repeat: 1, yoyo: true, ease: Power1.easeOut }, "blueprint =+1.4")
+
+    // Down BLUEPRINT
+    .to(line, 0.5, { morphSVG: blueprintFoundation, ease: Back.easeIn }, "blueprint =+1.8")
+
+    // Up SMARTPHONE
+    .add("smartphone").add(setParticleSmartphone).set(line, { morphSVG: smartphoneFoundation }).to(line, 0.8, { morphSVG: smartphone, ease: Back.easeOut }, "smartphone").add(animateParticleSmartphone, "smartphone =+0.05")
+
+    // Data stream SMARTPHONE
+    .to(maskStream4, 0.5, { x: 185, ease: Power1.easeOut }, "smartphone =+1").to(maskStream1, 0.5, { x: 185, ease: Power1.easeIn }, "smartphone =+1.7").to(maskStream2, 0.5, { x: 185, ease: Power1.easeIn }, "smartphone =+1.7").to(maskStream3, 0.5, { x: 185, ease: Power1.easeIn }, "smartphone =+1.7")
+
+    // Down SMARTPHONE
+    .to(line, 0.5, { morphSVG: smartphoneFoundation, ease: Back.easeIn }, "smartphone =+1.8")
+
+    // Up HEART
+    .add("heart").add(setParticleHeart).set(line, { morphSVG: heartFoundation }).to(line, 0.8, { morphSVG: heart, ease: Back.easeOut }, "heart").add(animateParticleHeart, "heart =+0.05")
+
+    // Draw HEART
+    .to(heartlines, 0.5, { drawSVG: "100%", ease: Power3.easeInOut }, "heart =+0.4")
+
+    // Beat HEART
+    .to(line, 0.2, { morphSVG: beat, repeat: 1, yoyo: true, ease: Power1.easeOut, repeatDelay: 0.05 }, "heart =+1.2").staggerTo(heartlines, 0.2, { cycle: { morphSVG: beatlines }, repeat: 1, yoyo: true, ease: Power1.easeOut, repeatDelay: 0.05 }, 0, "heart =+1.2")
+
+    // Down HEART
+    .to(line, 0.5, { morphSVG: heartFoundation, ease: Back.easeIn }, "heart =+1.8").to(heartline1, 0.3, { drawSVG: "100% 100%", ease: Power1.easeIn }, "heart =+1.8").to(heartline2, 0.3, { drawSVG: "0%", ease: Power1.easeIn }, "heart =+1.8")
+
+    // Up LOGO
+    .add("logo").set(line, { morphSVG: logoFoundation }).to(line, 1.5, { morphSVG: logo, ease: Power2.easeOut }, "logo").to(logolines, 1.5, { drawSVG: "100%", ease: Power1.easeOut }, "logo")
+
+    // Reveal
+    .add("gopro").to(mask, 0.7, { x: 0, ease: Power3.easeIn }, "gopro").to(symbol, 0.7, { x: 0, scale: 1, ease: Power3.easeIn }, "gopro").to(text0, 0.7, { x: 0, ease: Power3.easeIn }, "gopro").to(text1, 0.7, { x: 0, ease: Power3.easeIn }, "gopro");
 }
 "use strict";
 
