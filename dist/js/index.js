@@ -43,10 +43,10 @@ qualityParticle = svg.querySelector("#quality-particle"),
 
 
 // Smartphone
-maskStream1 = svg.querySelector("#maskStream1"),
-    maskStream2 = svg.querySelector("#maskStream2"),
-    maskStream3 = svg.querySelector("#maskStream3"),
-    maskStream4 = svg.querySelector("#maskStream4"),
+maskStream1 = svg.querySelector("#data-mask1"),
+    maskStream2 = svg.querySelector("#data-mask2"),
+    maskStream3 = svg.querySelector("#data-mask3"),
+    maskStream4 = svg.querySelector("#data-mask4"),
     smartphoneBtn = svg.querySelector("#button"),
 
 
