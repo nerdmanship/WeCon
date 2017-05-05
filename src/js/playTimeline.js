@@ -16,6 +16,9 @@ function playTimeline() {
         .to(line, 0.8, { morphSVG: blueprint, ease: Back.easeOut }, "blueprint")
         .add(animateParticleBlueprint, "blueprint =+0.05")
 
+        // Details BLUEPRINT
+        .add(getBlueprintDetailsTl, "blueprint")
+
         // Quality particle BLUEPRINT
         .to(qualityParticle, 0.4, { scale: 1, repeat: 1, yoyo:true, ease: Power2.easeOut }, "blueprint =+1.4")
         .to(qualityParticle, 0.4, { y: "-=30", repeat: 1, yoyo:true, ease: Power1.easeOut }, "blueprint =+1.4")
@@ -35,6 +38,9 @@ function playTimeline() {
         .to(maskStream1, 0.5, { x: 185, ease: Power1.easeIn }, "smartphone =+1.7")
         .to(maskStream2, 0.5, { x: 185, ease: Power1.easeIn }, "smartphone =+1.7")
         .to(maskStream3, 0.5, { x: 185, ease: Power1.easeIn }, "smartphone =+1.7")
+        
+        // Details SMARTPHONE
+        .add(getSmartphoneDetailsTl, "smartphone")
 
         // Down SMARTPHONE
         .to(line, 0.5, { morphSVG: smartphoneFoundation, ease: Back.easeIn }, "smartphone =+1.8")
@@ -47,7 +53,7 @@ function playTimeline() {
         .add(animateParticleHeart, "heart =+0.05")
 
         // Draw HEART
-        .to(heartlines, 0.5, {drawSVG: "100%", ease: Power3.easeInOut }, "heart =+0.4")
+        .to(heartlines, 0.5, {drawSVG: "100%", ease: Power2.easeInOut }, "heart =+0.2")
 
         // Beat HEART
         .to(line, 0.2, { morphSVG: beat, repeat: 1, yoyo:true, ease: Power1.easeOut, repeatDelay: 0.05 }, "heart =+1.2")

@@ -2,22 +2,72 @@
 
 // Cache DOM
 var svg = document.querySelector("#svg"),
-    line = svg.querySelector("#line"),
-    symbol = svg.querySelector("#symbol"),
-    details = svg.querySelector("#details"),
-    particleContainer = svg.querySelector("#particles"),
-    text0 = svg.querySelector("#WE"),
+
+
+// All
+all = svg.querySelector("#all"),
+
+
+// Main line
+line = svg.querySelector("#line"),
+
+
+// All except text
+symbol = svg.querySelector("#symbol"),
+
+
+// Text
+text0 = svg.querySelector("#WE"),
     text1 = svg.querySelector("#Construction"),
     mask = svg.querySelector("#text-mask"),
-    maskStream1 = svg.querySelector("#maskStream1"),
+
+
+// Blueprint
+qualityParticle = svg.querySelector("#quality-particle"),
+    cloud2 = svg.querySelector("#cloud2"),
+    cloud = svg.querySelector("#cloud"),
+    verticalFrame = svg.querySelector("#vertical"),
+    horizontalFrame = svg.querySelector("#horizontal"),
+    mainBuilding = svg.querySelector("#main"),
+    baseBuilding = svg.querySelector("#base"),
+    topBuilding = svg.querySelector("#top"),
+    tipBuilding = svg.querySelector("#tip"),
+
+
+// Smartphone
+maskStream1 = svg.querySelector("#maskStream1"),
     maskStream2 = svg.querySelector("#maskStream2"),
     maskStream3 = svg.querySelector("#maskStream3"),
     maskStream4 = svg.querySelector("#maskStream4"),
-    heartline1 = svg.querySelector("#heartline1"),
+    smartphoneBtn = svg.querySelector("#button"),
+
+
+// Heart
+heartline1 = svg.querySelector("#heartline1"),
     heartline2 = svg.querySelector("#heartline2"),
-    logoline1 = svg.querySelector("#logoline1"),
-    logoline2 = svg.querySelector("#logoline2"),
-    qualityParticle = svg.querySelector("#quality-particle");
+
+
+// Logo
+logoline1 = svg.querySelector("#logoline1"),
+    logoline2 = svg.querySelector("#logoline2");
+
+var data = [];
+
+for (var i = 0; i < 4; i++) {
+  data[i] = svg.querySelector("#data" + (i + 1));
+}
+
+var ticks = [];
+
+for (var i = 0; i < 12; i++) {
+  ticks[i] = svg.querySelector("#measure-tick" + (i + 1));
+}
+
+var windows = [];
+
+for (var i = 0; i < 40; i++) {
+  windows[i] = svg.querySelector("#window" + (i + 1));
+}
 "use strict";
 
 // Path data
@@ -265,6 +315,7 @@ var Particle = function () {
 
 var particles = [];
 var count = 7;
+var parent = svg.querySelector("#particles");
 
 function createParticles() {
   // Create X amount of particles
@@ -275,7 +326,7 @@ function createParticles() {
     particle.target.setAttribute("opacity", "0");
 
     // Append to DOM
-    particle.appendTo(particleContainer);
+    particle.appendTo(parent);
 
     // Push to array
     particles.push(particle);
@@ -395,17 +446,66 @@ function animateParticleHeart() {
 }
 "use strict";
 
-function setStart() {
-  var lines = [heartline1, heartline2, logoline1, logoline2];
+function getBlueprintDetailsTl() {
 
+  var tl = new TimelineMax();
+
+  tl
+  // Up
+  .to(horizontal, 0.8, { drawSVG: "100%", ease: Power4.easeOut }, 0).to(vertical, 0.6, { drawSVG: "100%", ease: Power2.easeOut }, 0).staggerTo(ticks, 0.01, { autoAlpha: 1 }, 0.035, 0).staggerTo([cloud, cloud2], 0.5, { scale: 1, ease: Back.easeOut }, -0.1, 0.2).set(mainBuilding, { autoAlpha: 1 }, 0.6).fromTo(mainBuilding, 1, { drawSVG: "50% 50%" }, { drawSVG: "100%", ease: Power1.easeIn }, 0.5).set(baseBuilding, { autoAlpha: 1 }, 0.8).fromTo(baseBuilding, 0.3, { drawSVG: "50% 50%" }, { drawSVG: "100%", ease: Power1.easeOut }, 0.9).staggerTo(windows, 0.01, { autoAlpha: 1 }, 0.015, 1).set([topBuilding, tipBuilding], { autoAlpha: 1 }, 1.4).fromTo([topBuilding, tipBuilding], 0.2, { drawSVG: "50% 50%" }, { drawSVG: "100%", ease: Power1.easeInOut }, 1.4)
+
+  // Down
+  .to([cloud, cloud2], 0.5, { y: 100, scale: 0, ease: Back.easeIn }, 1.8).set([topBuilding, tipBuilding], { autoAlpha: 0 }, 2.1).staggerTo(windows, 0.01, { autoAlpha: 0 }, -0.005, 2.1).fromTo(mainBuilding, 0.4, { drawSVG: "100%" }, { drawSVG: "50% 50%", ease: Power3.easeIn }, 1.9).set(baseBuilding, { autoAlpha: 0 }, 2.3).set(mainBuilding, { autoAlpha: 0 }, 2.3).to(vertical, 0.4, { drawSVG: "0%", ease: Power2.easeIn }, 1.9).staggerTo(ticks, 0.01, { autoAlpha: 0 }, -0.03, 2).to(horizontal, 0.2, { drawSVG: "0%", ease: Power2.easeIn }, 2)
+  //.set(horizontal, { autoAlpha: 0}, 2.2)
+  ;
+
+  return tl;
+}
+"use strict";
+
+function getSmartphoneDetailsTl() {
+
+  var tl = new TimelineMax();
+
+  tl.set(smartphoneBtn, { autoAlpha: 1 }, 0.3).fromTo(smartphoneBtn, 0.3, { drawSVG: "50% 50%" }, { drawSVG: "100%" }, 0.3).staggerTo(data, 0.01, { autoAlpha: 1 }, 0.1, 1).staggerTo(data, 0.7, { drawSVG: "0% 100%", ease: Power1.easeInOut }, 0.1, 0.9).staggerTo(data, 0.5, { drawSVG: "100% 100%", ease: Power1.easeIn }, 0.1, 1.4).to(smartphoneBtn, 0.3, { drawSVG: "50% 50%" }, 2).set(smartphoneBtn, { autoAlpha: 0 }, 2.2);
+
+  return tl;
+}
+"use strict";
+
+function setStart() {
+  var lines = [heartline1, heartline2, logoline1, logoline2, smartphoneBtn, horizontal, vertical, mainBuilding, baseBuilding, topBuilding, tipBuilding];
+  var clouds = [cloud, cloud2];
+
+  // Reveal scene
+  TweenMax.set(all, { autoAlpha: 1 });
+
+  // First path for main line
   TweenMax.set(line, { attr: { d: blueprintFoundation } });
-  TweenMax.set([text0, text1], { x: -500, autoAlpha: 1 });
+
+  // Start position and scale for everything but texts
   TweenMax.set(symbol, { scale: 1.5, transformOrigin: "bottom left", x: 110 });
+
+  // Start position for texts and mask
+  TweenMax.set([text0, text1], { x: -500, autoAlpha: 1 });
   TweenMax.set(mask, { x: 350 });
-  TweenMax.set(details, { autoAlpha: 1 });
-  TweenMax.set(qualityParticle, { scale: 0, y: 20, transformOrigin: "bottom center" });
+
+  // Start position for blueprint details
+  TweenMax.set([ticks, windows], { autoAlpha: 0 });
+  TweenMax.set(clouds, { scale: 0, transformOrigin: "center" });
+  TweenMax.set(cloud, { x: 17 });
+  TweenMax.set([baseBuilding, mainBuilding, topBuilding, tipBuilding], { autoAlpha: 0 });
+  TweenMax.set(qualityParticle, { scale: 0, y: 10, transformOrigin: "bottom center" });
+
+  // Start position for smartphone details
+  TweenMax.set(data, { autoAlpha: 0 });
+  TweenMax.set(smartphoneBtn, { autoAlpha: 0, rotation: 270, transformOrigin: "center" });
+
+  // All lines undrawn
   TweenMax.set(lines, { drawSVG: "0%" });
-  TweenMax.set(heartline2, { drawSVG: "100% 100%" });
+  // Exceptions
+  TweenMax.set(heartline1, { drawSVG: "100% 100%" });
+  TweenMax.set(data, { drawSVG: "0%" });
 }
 "use strict";
 
@@ -422,6 +522,9 @@ function playTimeline() {
     // Up BLUEPRINT
     .add("blueprint").add(setParticleBlueprint).to(line, 0.8, { morphSVG: blueprint, ease: Back.easeOut }, "blueprint").add(animateParticleBlueprint, "blueprint =+0.05")
 
+    // Details BLUEPRINT
+    .add(getBlueprintDetailsTl, "blueprint")
+
     // Quality particle BLUEPRINT
     .to(qualityParticle, 0.4, { scale: 1, repeat: 1, yoyo: true, ease: Power2.easeOut }, "blueprint =+1.4").to(qualityParticle, 0.4, { y: "-=30", repeat: 1, yoyo: true, ease: Power1.easeOut }, "blueprint =+1.4")
 
@@ -434,6 +537,9 @@ function playTimeline() {
     // Data stream SMARTPHONE
     .to(maskStream4, 0.5, { x: 185, ease: Power1.easeOut }, "smartphone =+1").to(maskStream1, 0.5, { x: 185, ease: Power1.easeIn }, "smartphone =+1.7").to(maskStream2, 0.5, { x: 185, ease: Power1.easeIn }, "smartphone =+1.7").to(maskStream3, 0.5, { x: 185, ease: Power1.easeIn }, "smartphone =+1.7")
 
+    // Details SMARTPHONE
+    .add(getSmartphoneDetailsTl, "smartphone")
+
     // Down SMARTPHONE
     .to(line, 0.5, { morphSVG: smartphoneFoundation, ease: Back.easeIn }, "smartphone =+1.8")
 
@@ -441,7 +547,7 @@ function playTimeline() {
     .add("heart").add(setParticleHeart).set(line, { morphSVG: heartFoundation }).to(line, 0.8, { morphSVG: heart, ease: Back.easeOut }, "heart").add(animateParticleHeart, "heart =+0.05")
 
     // Draw HEART
-    .to(heartlines, 0.5, { drawSVG: "100%", ease: Power3.easeInOut }, "heart =+0.4")
+    .to(heartlines, 0.5, { drawSVG: "100%", ease: Power2.easeInOut }, "heart =+0.2")
 
     // Beat HEART
     .to(line, 0.2, { morphSVG: beat, repeat: 1, yoyo: true, ease: Power1.easeOut, repeatDelay: 0.05 }, "heart =+1.2").staggerTo(heartlines, 0.2, { cycle: { morphSVG: beatlines }, repeat: 1, yoyo: true, ease: Power1.easeOut, repeatDelay: 0.05 }, 0, "heart =+1.2")

@@ -1213,6 +1213,15 @@
 		"oAP": "\/dist\/favicon.ico",
 		"oF": 0
 		},
+	"\/src\/js\/blueprint-details.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/dist\/js\/blueprint-details.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 1
+		},
 	"\/src\/js\/cacheDOM.js": {
 		"ft": 64,
 		"mi": 0,
@@ -1254,6 +1263,15 @@
 		"mi": 0,
 		"oA": 1,
 		"oAP": "\/dist\/js\/setStart.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 1
+		},
+	"\/src\/js\/smartphone-details.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/dist\/js\/smartphone-details.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 1
@@ -1362,14 +1380,26 @@
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/src\/js\/setStart.js",
+			"linkedFileAbbreviatedPath": "\/src\/js\/blueprint-details.js",
 			"position": 5,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/src\/js\/playTimeline.js",
+			"linkedFileAbbreviatedPath": "\/src\/js\/smartphone-details.js",
 			"position": 6,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/src\/js\/setStart.js",
+			"position": 7,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/src\/js\/playTimeline.js",
+			"position": 8,
 			"type": 0
 			}
 		]
@@ -1379,7 +1409,7 @@
 	"displayValue": "wecon",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-girlfriend",
-	"lastBuiltDate": 515500829
+	"lastBuiltDate": 515655357
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

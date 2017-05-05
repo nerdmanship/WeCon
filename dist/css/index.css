@@ -6,5 +6,12 @@
   padding: 30px; }
 
 svg {
-  background-color: #eee;
-  width: 500px; }
+  position: relative;
+  top: 0;
+  left: 50%;
+  margin-top: 100px;
+  width: 400px;
+  height: 160px;
+  overflow: visible;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); }
