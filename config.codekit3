@@ -1179,7 +1179,7 @@
 		"oAP": "\/dist\/assets\/images\/blueprint.png",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1190,7 +1190,7 @@
 		"oAP": "\/dist\/assets\/images\/heart.png",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1201,7 +1201,7 @@
 		"oAP": "\/dist\/assets\/images\/smartphone.png",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},

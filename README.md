@@ -32,7 +32,7 @@ The main challenge here was to abstract the key value messages and convert them 
 
 **Approach:** Blueprint with a successful grand project
 
-![Professional](https://github.com/nerdmanship/WeCon/src/assets/images/blueprint.png "Professional")
+![Professional](https://github.com/nerdmanship/WeCon/blob/master/src/assets/images/blueprint.png?raw=true "Professional")
 
 ### Modern:
 
