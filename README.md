@@ -32,7 +32,7 @@ The main challenge here was to abstract the key value messages and convert them 
 
 **Approach:** Blueprint with a successful grand project
 
-![Professional](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Professional")
+![Professional](https://github.com/nerdmanship/WeCon/src/assets/images/blueprint.png "Professional")
 
 ### Modern:
 
@@ -50,7 +50,7 @@ The main challenge here was to abstract the key value messages and convert them 
 ### [Launch animation](https://nerdmanship.github.io/WeCon/dist/)
 
 
-Follow Nerdmanship Custom
+## Follow Nerdmanship Custom
 * [Facebook](http://www.facebook.com/nerdmanship)
 * [Twitter](http://www.twitter.com/stromqvist)
 * [Dribbble](http://www.dribbble.com/stromqvist)
