@@ -1,5 +1,5 @@
 function setStart() {
-  var lines = [ heartline1, heartline2, logoline1, logoline2, smartphoneBtn, horizontal, vertical, mainBuilding, baseBuilding, topBuilding, tipBuilding ];
+  var lines = [ heartline1, heartline2, logoline1, logoline2, smartphoneBtn, horizontalFrame, verticalFrame, mainBuilding, baseBuilding, topBuilding, tipBuilding ];
   var clouds = [cloud, cloud2];
 
   // Reveal scene

@@ -1,5 +1,5 @@
 function playTimeline() {
-    // Arrays
+
     var heartlines = [heartline1, heartline2];
     var beatlines = [beatline1, beatline2];
     var logolines = [logoline1, logoline2];

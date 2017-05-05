@@ -1309,6 +1309,15 @@
 		"sC": 1,
 		"tS": 1
 		},
+	"\/src\/js\/utility.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/dist\/js\/utility.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 1
+		},
 	"\/src\/js\/wecon-particles.js": {
 		"ft": 64,
 		"mi": 0,
@@ -1383,19 +1392,19 @@
 	"\/src\/js\/index.js": [
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/src\/js\/cacheDOM.js",
+			"linkedFileAbbreviatedPath": "\/src\/js\/utility.js",
 			"position": 0,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/src\/js\/data.js",
+			"linkedFileAbbreviatedPath": "\/src\/js\/cacheDOM.js",
 			"position": 1,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/src\/assets\/nerdmanship\/js\/utility.js",
+			"linkedFileAbbreviatedPath": "\/src\/js\/data.js",
 			"position": 2,
 			"type": 0
 			},
@@ -1442,7 +1451,7 @@
 	"displayValue": "wecon",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-girlfriend",
-	"lastBuiltDate": 515659610
+	"lastBuiltDate": 515672620
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -2803,7 +2812,7 @@
 	"externalServerAddress": "http:\/\/localhost:8888",
 	"gitIgnoreBuildFolder": 0,
 	"hideConfigFile": 0,
-	"jsCheckerReservedNamesString": "",
+	"jsCheckerReservedNamesString": "TimelineMax, TweenMax, Back, Power1, Power2, Power3, Power4",
 	"jsHintFlags2": {
 		"asi": {
 			"active": 0,
@@ -2826,7 +2835,7 @@
 			"flagValue": -1
 			},
 		"camelcase": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"couch": {
@@ -2866,7 +2875,7 @@
 			"flagValue": -1
 			},
 		"esnext": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"evil": {

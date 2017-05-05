@@ -1,5 +1,13 @@
 "use strict";
 
+function random(min, max) {
+	if (max === null) {
+		max = min;min = 0;
+	}
+	return Math.random() * (max - min) + min;
+}
+"use strict";
+
 // Cache DOM
 var svg = document.querySelector("#svg"),
 
@@ -83,7 +91,6 @@ var logoFoundation = "M3 292.9l67.28-1.07 2.223-.034 2.167-.035 2.267-.035 73.77
 
 var beatline1 = 'M371.364 206.48c-9.597 13.995-21.15 28.478-33.338 41.02';
 var beatline2 = 'M207.66 146c0-33.78 14.513-57.693 36.572-56.79';
-var beatline3 = 'M265.57 97.935c3.258 3.128 5.71 7.094 7.03 11.877';
 
 var colors = {
   successGreen: "#3EE09E",
@@ -234,57 +241,6 @@ var p = [{
 }];
 "use strict";
 
-function random(min, max) {
-  if (max === null) {
-    max = min;min = 0;
-  }
-  return Math.random() * (max - min) + min;
-}
-
-function map(value, sourceMin, sourceMax, destinationMin, destinationMax) {
-  return destinationMin + (destinationMax - destinationMin) * ((value - sourceMin) / (sourceMax - sourceMin)) || 0;
-}
-
-// exponential index normalization = index^pow / count^pow
-function expNorm(val, min, max, power) {
-  var expValue = Math.pow(val - min, power);
-  var expRange = Math.pow(max - min, power);
-
-  // Test this to make sure...
-  return expValue / expRange;
-}
-
-function degreesToRads(degrees) {
-  return degrees * Math.PI / 180;
-}
-
-function radsToDegrees(rads) {
-  return rads / Math.PI * 180;
-}
-
-/*
-
-data = {
-  x: [],
-  y: [],
-  scale: []
-}
-
-TweenMax.staggerFromTo(obj.property, 1, { obj.property.value[i]: 0 }, { obj.property.value[i]: 1 }, 0.1)
-
-*/
-
-/*
-
-extend particle class
-
-followLeader(leader, acceleration) {
-  
-}
-
-*/
-"use strict";
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -315,7 +271,7 @@ var Particle = function () {
 
 var particles = [];
 var count = 7;
-var parent = svg.querySelector("#particles");
+var parentContainer = svg.querySelector("#particles");
 
 function createParticles() {
   // Create X amount of particles
@@ -326,7 +282,7 @@ function createParticles() {
     particle.target.setAttribute("opacity", "0");
 
     // Append to DOM
-    particle.appendTo(parent);
+    particle.appendTo(parentContainer);
 
     // Push to array
     particles.push(particle);
@@ -452,12 +408,10 @@ function getBlueprintDetailsTl() {
 
   tl
   // Up
-  .to(horizontal, 0.8, { drawSVG: "100%", ease: Power4.easeOut }, 0).to(vertical, 0.6, { drawSVG: "100%", ease: Power2.easeOut }, 0).staggerTo(ticks, 0.01, { autoAlpha: 1 }, 0.035, 0).staggerTo([cloud, cloud2], 0.5, { scale: 1, ease: Back.easeOut }, -0.1, 0.2).set(mainBuilding, { autoAlpha: 1 }, 0.6).fromTo(mainBuilding, 1, { drawSVG: "50% 50%" }, { drawSVG: "100%", ease: Power1.easeIn }, 0.5).set(baseBuilding, { autoAlpha: 1 }, 0.8).fromTo(baseBuilding, 0.3, { drawSVG: "50% 50%" }, { drawSVG: "100%", ease: Power1.easeOut }, 0.9).staggerTo(windows, 0.01, { autoAlpha: 1 }, 0.015, 1).set([topBuilding, tipBuilding], { autoAlpha: 1 }, 1.4).fromTo([topBuilding, tipBuilding], 0.2, { drawSVG: "50% 50%" }, { drawSVG: "100%", ease: Power1.easeInOut }, 1.4)
+  .to(horizontalFrame, 0.8, { drawSVG: "100%", ease: Power4.easeOut }, 0).to(verticalFrame, 0.6, { drawSVG: "100%", ease: Power2.easeOut }, 0).staggerTo(ticks, 0.01, { autoAlpha: 1 }, 0.035, 0).staggerTo([cloud, cloud2], 0.5, { scale: 1, ease: Back.easeOut }, -0.1, 0.2).set(mainBuilding, { autoAlpha: 1 }, 0.6).fromTo(mainBuilding, 1, { drawSVG: "50% 50%" }, { drawSVG: "100%", ease: Power1.easeIn }, 0.5).set(baseBuilding, { autoAlpha: 1 }, 0.8).fromTo(baseBuilding, 0.3, { drawSVG: "50% 50%" }, { drawSVG: "100%", ease: Power1.easeOut }, 0.9).staggerTo(windows, 0.01, { autoAlpha: 1 }, 0.015, 1).set([topBuilding, tipBuilding], { autoAlpha: 1 }, 1.4).fromTo([topBuilding, tipBuilding], 0.2, { drawSVG: "50% 50%" }, { drawSVG: "100%", ease: Power1.easeInOut }, 1.4)
 
   // Down
-  .to([cloud, cloud2], 0.5, { y: 100, scale: 0, ease: Back.easeIn }, 1.8).set([topBuilding, tipBuilding], { autoAlpha: 0 }, 2.1).staggerTo(windows, 0.01, { autoAlpha: 0 }, -0.005, 2.1).fromTo(mainBuilding, 0.4, { drawSVG: "100%" }, { drawSVG: "50% 50%", ease: Power3.easeIn }, 1.9).set(baseBuilding, { autoAlpha: 0 }, 2.3).set(mainBuilding, { autoAlpha: 0 }, 2.3).to(vertical, 0.4, { drawSVG: "0%", ease: Power2.easeIn }, 1.9).staggerTo(ticks, 0.01, { autoAlpha: 0 }, -0.03, 2).to(horizontal, 0.2, { drawSVG: "0%", ease: Power2.easeIn }, 2)
-  //.set(horizontal, { autoAlpha: 0}, 2.2)
-  ;
+  .to([cloud, cloud2], 0.5, { y: 100, scale: 0, ease: Back.easeIn }, 1.8).set([topBuilding, tipBuilding], { autoAlpha: 0 }, 2.1).staggerTo(windows, 0.01, { autoAlpha: 0 }, -0.005, 2.1).fromTo(mainBuilding, 0.4, { drawSVG: "100%" }, { drawSVG: "50% 50%", ease: Power3.easeIn }, 1.9).set(baseBuilding, { autoAlpha: 0 }, 2.3).set(mainBuilding, { autoAlpha: 0 }, 2.3).to(verticalFrame, 0.4, { drawSVG: "0%", ease: Power2.easeIn }, 1.9).staggerTo(ticks, 0.01, { autoAlpha: 0 }, -0.03, 2).to(horizontalFrame, 0.2, { drawSVG: "0%", ease: Power2.easeIn }, 2);
 
   return tl;
 }
@@ -474,7 +428,7 @@ function getSmartphoneDetailsTl() {
 "use strict";
 
 function setStart() {
-  var lines = [heartline1, heartline2, logoline1, logoline2, smartphoneBtn, horizontal, vertical, mainBuilding, baseBuilding, topBuilding, tipBuilding];
+  var lines = [heartline1, heartline2, logoline1, logoline2, smartphoneBtn, horizontalFrame, verticalFrame, mainBuilding, baseBuilding, topBuilding, tipBuilding];
   var clouds = [cloud, cloud2];
 
   // Reveal scene
@@ -510,7 +464,7 @@ function setStart() {
 "use strict";
 
 function playTimeline() {
-    // Arrays
+
     var heartlines = [heartline1, heartline2];
     var beatlines = [beatline1, beatline2];
     var logolines = [logoline1, logoline2];

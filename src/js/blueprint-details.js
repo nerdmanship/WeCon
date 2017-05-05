@@ -4,8 +4,8 @@ function getBlueprintDetailsTl() {
   
   tl
     // Up
-    .to(horizontal, 0.8, { drawSVG: "100%", ease: Power4.easeOut }, 0)
-    .to(vertical, 0.6, { drawSVG: "100%", ease: Power2.easeOut }, 0)
+    .to(horizontalFrame, 0.8, { drawSVG: "100%", ease: Power4.easeOut }, 0)
+    .to(verticalFrame, 0.6, { drawSVG: "100%", ease: Power2.easeOut }, 0)
     .staggerTo(ticks, 0.01, { autoAlpha: 1 }, 0.035, 0)
 
     .staggerTo([cloud, cloud2], 0.5, { scale: 1, ease: Back.easeOut }, -0.1, 0.2)
@@ -28,10 +28,9 @@ function getBlueprintDetailsTl() {
     .fromTo(mainBuilding, 0.4, { drawSVG: "100%"}, { drawSVG: "50% 50%", ease: Power3.easeIn }, 1.9)
     .set(baseBuilding, { autoAlpha: 0}, 2.3)
     .set(mainBuilding, { autoAlpha: 0}, 2.3)
-    .to(vertical, 0.4, { drawSVG: "0%", ease: Power2.easeIn }, 1.9)
+    .to(verticalFrame, 0.4, { drawSVG: "0%", ease: Power2.easeIn }, 1.9)
     .staggerTo(ticks, 0.01, { autoAlpha: 0 }, -0.03, 2)
-    .to(horizontal, 0.2, { drawSVG: "0%", ease: Power2.easeIn }, 2)
-    //.set(horizontal, { autoAlpha: 0}, 2.2)
+    .to(horizontalFrame, 0.2, { drawSVG: "0%", ease: Power2.easeIn }, 2)
   ;
 
   return tl;

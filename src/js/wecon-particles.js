@@ -1,6 +1,6 @@
 var particles = [];
 var count = 7;
-var parent = svg.querySelector("#particles");
+var parentContainer = svg.querySelector("#particles");
 
 function createParticles() {
   // Create X amount of particles
@@ -11,7 +11,7 @@ function createParticles() {
     particle.target.setAttribute("opacity", "0");
 
     // Append to DOM
-    particle.appendTo(parent);
+    particle.appendTo(parentContainer);
 
     // Push to array
     particles.push(particle);
