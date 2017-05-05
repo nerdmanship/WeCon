@@ -1172,6 +1172,39 @@
 		"sC": 1,
 		"tS": 1
 		},
+	"\/src\/assets\/images\/blueprint.png": {
+		"ft": 32768,
+		"iS": 48560,
+		"oA": 0,
+		"oAP": "\/dist\/assets\/images\/blueprint.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/assets\/images\/heart.png": {
+		"ft": 32768,
+		"iS": 38966,
+		"oA": 0,
+		"oAP": "\/dist\/assets\/images\/heart.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/assets\/images\/smartphone.png": {
+		"ft": 32768,
+		"iS": 37751,
+		"oA": 0,
+		"oAP": "\/dist\/assets\/images\/smartphone.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/src\/assets\/nerdmanship\/js\/controls.js": {
 		"ft": 64,
 		"mi": 0,
