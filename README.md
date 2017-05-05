@@ -38,13 +38,13 @@ The main challenge here was to abstract the key value messages and convert them 
 
 **Approach:** A smartphone with single data input and multiple data outputs
 
-![Modern](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Modern")
+![Modern](https://github.com/nerdmanship/WeCon/blob/master/src/assets/images/smartphone.png?raw=true "Modern")
 
 ### Family values:
 
 **Approach:** A beating heart
 
-![Family values](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Family values")
+![Family values](https://github.com/nerdmanship/WeCon/blob/master/src/assets/images/heart.png?raw=true "Family values")
 
 
 ### [Launch animation](https://nerdmanship.github.io/WeCon/dist/)
