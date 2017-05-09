@@ -9,12 +9,6 @@
 	],
 "creatorBuild": "25813",
 "files": {
-	"\/dist": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "\/dist\/dist",
-		"oF": 0
-		},
 	"\/LICENSE.txt": {
 		"ft": 8192,
 		"oA": 2,
@@ -1175,9 +1169,9 @@
 	"\/src\/assets\/images\/blueprint.png": {
 		"ft": 32768,
 		"iS": 48560,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/dist\/assets\/images\/blueprint.png",
-		"oF": 0,
+		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
@@ -1186,9 +1180,9 @@
 	"\/src\/assets\/images\/heart.png": {
 		"ft": 32768,
 		"iS": 38966,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/dist\/assets\/images\/heart.png",
-		"oF": 0,
+		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
@@ -1197,9 +1191,9 @@
 	"\/src\/assets\/images\/smartphone.png": {
 		"ft": 32768,
 		"iS": 37751,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/dist\/assets\/images\/smartphone.png",
-		"oF": 0,
+		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
@@ -1246,6 +1240,15 @@
 		"oAP": "\/dist\/favicon.ico",
 		"oF": 0
 		},
+	"\/src\/js\/animateLogo.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "\/dist\/js\/animateLogo.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 1
+		},
 	"\/src\/js\/blueprint-details.js": {
 		"ft": 64,
 		"mi": 0,
@@ -1282,6 +1285,15 @@
 		"sC": 1,
 		"tS": 1
 		},
+	"\/src\/js\/injectHtml.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/dist\/js\/injectHtml.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 1
+		},
 	"\/src\/js\/playTimeline.js": {
 		"ft": 64,
 		"mi": 0,
@@ -1314,6 +1326,15 @@
 		"mi": 0,
 		"oA": 1,
 		"oAP": "\/dist\/js\/utility.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 1
+		},
+	"\/src\/js\/vars.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "\/dist\/js\/vars.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 1
@@ -1389,60 +1410,66 @@
 "hooks": [
 	],
 "manualImportLinks": {
-	"\/src\/js\/index.js": [
+	"\/src\/js\/animateLogo.js": [
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/src\/js\/utility.js",
+			"linkedFileAbbreviatedPath": "\/src\/js\/data.js",
 			"position": 0,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/src\/js\/cacheDOM.js",
+			"linkedFileAbbreviatedPath": "\/src\/js\/injectHtml.js",
 			"position": 1,
-			"type": 0
+			"type": 1
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/src\/js\/data.js",
+			"linkedFileAbbreviatedPath": "\/src\/js\/cacheDOM.js",
 			"position": 2,
-			"type": 0
+			"type": 1
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/src\/js\/utility.js",
+			"position": 3,
+			"type": 1
 			},
 		{
 			"followForSyntaxChecking": 1,
 			"linkedFileAbbreviatedPath": "\/src\/assets\/nerdmanship\/js\/particles.js",
-			"position": 3,
-			"type": 0
+			"position": 4,
+			"type": 1
 			},
 		{
 			"followForSyntaxChecking": 1,
 			"linkedFileAbbreviatedPath": "\/src\/js\/wecon-particles.js",
-			"position": 4,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/src\/js\/blueprint-details.js",
 			"position": 5,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/src\/js\/smartphone-details.js",
-			"position": 6,
-			"type": 0
+			"type": 1
 			},
 		{
 			"followForSyntaxChecking": 1,
 			"linkedFileAbbreviatedPath": "\/src\/js\/setStart.js",
-			"position": 7,
-			"type": 0
+			"position": 6,
+			"type": 1
 			},
 		{
 			"followForSyntaxChecking": 1,
 			"linkedFileAbbreviatedPath": "\/src\/js\/playTimeline.js",
+			"position": 7,
+			"type": 1
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/src\/js\/blueprint-details.js",
 			"position": 8,
-			"type": 0
+			"type": 1
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/src\/js\/smartphone-details.js",
+			"position": 9,
+			"type": 1
 			}
 		]
 	},
@@ -1451,7 +1478,7 @@
 	"displayValue": "wecon",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-girlfriend",
-	"lastBuiltDate": 515672620
+	"lastBuiltDate": 515927746
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

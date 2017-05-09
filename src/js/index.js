@@ -1,3 +1,1 @@
-createParticles();
-setStart();
-playTimeline();
+window.addEventListener("load", animateLogo("#header", {repeatDelay: 2}) );

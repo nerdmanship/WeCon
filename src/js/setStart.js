@@ -31,5 +31,4 @@ function setStart() {
   // Exceptions
   TweenMax.set(heartline1, { drawSVG: "100% 100%" });
   TweenMax.set(data, { drawSVG: "0%" });
-
 }

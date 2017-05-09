@@ -1,10 +1,16 @@
-function playTimeline() {
+function playTimeline(options) {
+
+    // If no options object was passed, create one
+    if (!options) { options = {}; }
+
+    // Set values to passed options or fall back on default
+    var delay = options.delay || 0;
 
     var heartlines = [heartline1, heartline2];
     var beatlines = [beatline1, beatline2];
     var logolines = [logoline1, logoline2];
 
-    var tl = new TimelineMax({ }).timeScale(1);
+    var tl = new TimelineMax({ delay: delay }).timeScale(1);
 
     tl
         .add("intro")

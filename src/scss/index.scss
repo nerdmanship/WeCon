@@ -1,17 +1,7 @@
-@import 'controls';
-
-$width: 400px;
-$height: $width/2.5;
-
-svg {
-  position: relative;
-  top:0;
-  left: 50%;
+#header {
+  margin-left: 200px;
   margin-top: 100px;
-  width: $width;
-  height: $height;
-
-  //border: #eee 1px solid;
-  overflow: visible;
-  transform: translateX(-50%)
+  background-color: #ddd;
+  height: 200px;
+  width: 500px;
 }

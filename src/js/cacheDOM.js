@@ -1,5 +1,6 @@
-// Cache DOM
-var svg = document.querySelector("#svg"),
+function cacheDOM() {
+
+  var svg = document.querySelector("#svg"),
   
   // All
   all = svg.querySelector("#all"),
@@ -42,20 +43,22 @@ var svg = document.querySelector("#svg"),
   logoline2 = svg.querySelector("#logoline2")
   ;
 
-var data = [];
 
-for(var i = 0; i < 4; i++) {
-  data[i] = svg.querySelector("#data" + (i+1));
-}
+  for(var i = 0; i < 4; i++) {
+    data[i] = svg.querySelector("#data" + (i+1));
+  }
 
-var ticks = [];
 
-for(var i = 0; i < 12; i++) {
-  ticks[i] = svg.querySelector("#measure-tick" + (i+1));
-}
+  for(var i = 0; i < 12; i++) {
+    ticks[i] = svg.querySelector("#measure-tick" + (i+1));
+  }
 
-var windows = [];
 
-for(var i = 0; i < 40; i++) {
-  windows[i] = svg.querySelector("#window" + (i+1));
+  for(var i = 0; i < 40; i++) {
+    windows[i] = svg.querySelector("#window" + (i+1));
+  }
+
+    return {
+      svg: svg
+    }
 }

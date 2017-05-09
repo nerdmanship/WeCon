@@ -1,8 +1,9 @@
-var particles = [];
-var count = 7;
-var parentContainer = svg.querySelector("#particles");
-
 function createParticles() {
+
+  var count = 7;
+  var parentContainer = svg.querySelector("#particles");
+  var particles = [];
+  
   // Create X amount of particles
   for(var i = 0; i < count; i++){
     var particle = new Particle(15, 300, 200);
