@@ -47,17 +47,17 @@ The main challenge here was to abstract the key value messages and convert them 
 
 ## How to use
 
-1. **Add the script in the page head:** Right click [here](https://github.com/nerdmanship/WeCon/raw/master/dist/js/weconLogoAnimation.min.js) to download weconLogoAnimation.min.js, choose 'save link as...' and save it to your javascript directory.
+1. **Get the script.** Right click [here](https://github.com/nerdmanship/WeCon/raw/master/dist/js/weconLogoAnimation.min.js) to download weconLogoAnimation.min.js, choose 'save link as...' and save it to your javascript directory. Then add the script in the page head:
 
 `<script type="text/javascript" src="js/weconLogoAnimation.min.js"></script>`
 
-2. **Create a div in which you want to place the animated logotype.**
+2. **Create a div** in which you want to place the animated logotype and give it an ID, i.e. "wrapper":
 
 `<div id="wrapper"></div>`
 
-3. **Initialise the animation in your main js file**, i.e. on page load, and pass the div id as a string as an argument
+3. **Initialise the animation** in your main js file, i.e. on page load, and pass the div ID as a string:
 
-`window.addEventListener("load", animateLogo("wrapper");`
+`window.addEventListener("load", animateLogotypeIn("wrapper");`
 
 #### Further information
 You can position and style the div as you would with any normal image wrapper. The logotype will take the dimensions that you give the wrapper.
