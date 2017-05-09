@@ -1,3 +1,1 @@
-createParticles();
-setStart();
-playTimeline();
+animateLogotypeIn("header");

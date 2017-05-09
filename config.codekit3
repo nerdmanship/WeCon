@@ -137,7 +137,7 @@
 	"\/src\/assets\/GreenSock-older\/src\/minified\/plugins\/DrawSVGPlugin.min.js": {
 		"ft": 64,
 		"mi": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/dist\/js\/DrawSVGPlugin.min.js",
 		"oF": 3,
 		"sC": 0,
@@ -173,7 +173,7 @@
 	"\/src\/assets\/GreenSock-older\/src\/minified\/plugins\/MorphSVGPlugin.min.js": {
 		"ft": 64,
 		"mi": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/dist\/js\/MorphSVGPlugin.min.js",
 		"oF": 3,
 		"sC": 0,
@@ -959,7 +959,7 @@
 	"\/src\/assets\/greensock\/src\/minified\/TweenMax.min.js": {
 		"ft": 64,
 		"mi": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/dist\/js\/TweenMax.min.js",
 		"oF": 3,
 		"sC": 0,
@@ -1246,6 +1246,24 @@
 		"oAP": "\/dist\/favicon.ico",
 		"oF": 0
 		},
+	"\/src\/js\/animateLogo.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/dist\/js\/animateLogo.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 1
+		},
+	"\/src\/js\/animationData.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/dist\/js\/animationData.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 1
+		},
 	"\/src\/js\/blueprint-details.js": {
 		"ft": 64,
 		"mi": 0,
@@ -1255,29 +1273,47 @@
 		"sC": 1,
 		"tS": 1
 		},
-	"\/src\/js\/cacheDOM.js": {
-		"ft": 64,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "\/dist\/js\/cacheDOM.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 1
-		},
-	"\/src\/js\/data.js": {
-		"ft": 64,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "\/dist\/js\/data.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 1
-		},
 	"\/src\/js\/index.js": {
 		"ft": 64,
 		"mi": 0,
 		"oA": 0,
 		"oAP": "\/dist\/js\/index.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 1
+		},
+	"\/src\/js\/init.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/dist\/js\/init.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 1
+		},
+	"\/src\/js\/injectionData.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/dist\/js\/injectionData.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 1
+		},
+	"\/src\/js\/injectSVG.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/dist\/js\/injectSVG.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 1
+		},
+	"\/src\/js\/particleData.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/dist\/js\/particleData.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 1
@@ -1309,20 +1345,20 @@
 		"sC": 1,
 		"tS": 1
 		},
-	"\/src\/js\/utility.js": {
-		"ft": 64,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "\/dist\/js\/utility.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 1
-		},
 	"\/src\/js\/wecon-particles.js": {
 		"ft": 64,
 		"mi": 0,
 		"oA": 1,
 		"oAP": "\/dist\/js\/wecon-particles.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 1
+		},
+	"\/src\/js\/weconLogoAnimation.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/dist\/js\/weconLogoAnimation.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 1
@@ -1389,22 +1425,22 @@
 "hooks": [
 	],
 "manualImportLinks": {
-	"\/src\/js\/index.js": [
+	"\/src\/js\/weconLogoAnimation.js": [
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/src\/js\/utility.js",
+			"linkedFileAbbreviatedPath": "\/src\/assets\/greensock\/src\/uncompressed\/TweenMax.js",
 			"position": 0,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/src\/js\/cacheDOM.js",
+			"linkedFileAbbreviatedPath": "\/src\/assets\/GreenSock-older\/src\/uncompressed\/plugins\/DrawSVGPlugin.js",
 			"position": 1,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/src\/js\/data.js",
+			"linkedFileAbbreviatedPath": "\/src\/assets\/GreenSock-older\/src\/uncompressed\/plugins\/MorphSVGPlugin.js",
 			"position": 2,
 			"type": 0
 			},
@@ -1416,32 +1452,44 @@
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/src\/js\/wecon-particles.js",
+			"linkedFileAbbreviatedPath": "\/src\/assets\/nerdmanship\/js\/utility.js",
 			"position": 4,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/src\/js\/blueprint-details.js",
+			"linkedFileAbbreviatedPath": "\/src\/js\/animationData.js",
 			"position": 5,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/src\/js\/smartphone-details.js",
+			"linkedFileAbbreviatedPath": "\/src\/js\/particleData.js",
 			"position": 6,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/src\/js\/setStart.js",
+			"linkedFileAbbreviatedPath": "\/src\/js\/injectionData.js",
 			"position": 7,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/src\/js\/playTimeline.js",
+			"linkedFileAbbreviatedPath": "\/src\/js\/injectSVG.js",
 			"position": 8,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/src\/js\/animateLogo.js",
+			"position": 9,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/src\/js\/init.js",
+			"position": 10,
 			"type": 0
 			}
 		]
@@ -1451,7 +1499,7 @@
 	"displayValue": "wecon",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-girlfriend",
-	"lastBuiltDate": 515672620
+	"lastBuiltDate": 516024572
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
