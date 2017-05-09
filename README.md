@@ -47,7 +47,7 @@ The main challenge here was to abstract the key value messages and convert them 
 
 ## How to use
 
-1. **Add the script in the page head:** Right click [here](), choose 'save link as...' and save it to your js directory.
+1. **Add the script in the page head:** Right click [here](https://github.com/nerdmanship/WeCon/raw/master/dist/js/weconLogoAnimation.min.js) to download weconLogoAnimation.min.js, choose 'save link as...' and save it to your javascript directory.
 
 `<script type="text/javascript" src="js/weconLogoAnimation.min.js"></script>`
 
