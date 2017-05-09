@@ -1,13 +1,11 @@
 # Logotype Animation for We Construction
 
-A pure javascript web animation mainly for We Construction website, but also for a wide variety of other uses.
+A pure javascript web animation for We Construction website.
 
-## Purpose
-Communicate key values as the logo reveals
+#### Click to [launch animation](https://nerdmanship.github.io/WeCon/dist/)
 
-* Professional
-* Modern
-* Family values
+## Purpose of the animation
+Communicate company values as the logo reveals
 
 #### Professional
 * We take on grand projects
@@ -24,7 +22,7 @@ Communicate key values as the logo reveals
 * We care about relationships
 * We value a human aspect
 
-## Result
+## Visual approach
 
 The main challenge here was to abstract the key value messages and convert them into something familiar and emotional that could be digested, understood and memorized in just a few seconds.
 
@@ -47,14 +45,38 @@ The main challenge here was to abstract the key value messages and convert them 
 ![Family values](https://github.com/nerdmanship/WeCon/blob/master/src/assets/images/heart.png?raw=true "Family values")
 
 
-### [Launch animation](https://nerdmanship.github.io/WeCon/dist/)
+## How to use
 
+1. **Add the script in the page head:** Right click [here](), choose 'save link as...' and save it to your js directory.
+
+`<script type="text/javascript" src="js/weconLogoAnimation.min.js"></script>`
+
+2. **Create a div in which you want to place the animated logotype.**
+
+`<div id="wrapper"></div>`
+
+3. **Initialise the animation in your main js file**, i.e. on page load, and pass the div id as a string as an argument
+
+`window.addEventListener("load", animateLogo("wrapper");`
+
+#### Further information
+You can position and style the div as you would with any normal image wrapper. The logotype will take the dimensions that you give the wrapper.
+
+## Dependencies
+(Included in weconLogoAnimation.min.js)
+* GSAP TweenMax
+* GSAP MorphSVGPlugin
+* GSAP DrawSVGPlugin
 
 ## Follow Nerdmanship Custom
 * [Facebook](http://www.facebook.com/nerdmanship)
 * [Twitter](http://www.twitter.com/stromqvist)
 * [Dribbble](http://www.dribbble.com/stromqvist)
 * [Codepen](http://www.codepen.io/nerdmanship)
+
+## Tech spec
+* Size: 52 Kb including dependencies
+
 
 ## License
 

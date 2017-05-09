@@ -1358,8 +1358,8 @@
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/dist\/js\/weconLogoAnimation.js",
-		"oF": 0,
+		"oAP": "\/dist\/js\/weconLogoAnimation.min.js",
+		"oF": 2,
 		"sC": 1,
 		"tS": 1
 		},
@@ -1499,7 +1499,7 @@
 	"displayValue": "wecon",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-girlfriend",
-	"lastBuiltDate": 516024572
+	"lastBuiltDate": 516025030
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
