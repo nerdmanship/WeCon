@@ -76,7 +76,7 @@ You can position and style the div as you would with any normal image wrapper. T
 
 ## Tech spec
 * Size: 52 Kb including dependencies
-
+* Runs at 60 fps on both desktop and mobile
 
 ## License
 
