@@ -68,15 +68,59 @@ You can position and style the div as you would with any normal image wrapper. T
 * GSAP MorphSVGPlugin
 * GSAP DrawSVGPlugin
 
+## Tech spec
+* Size: 52 Kb including dependencies
+* Runs at 60 fps on both desktop and mobile
+
+## Delivery
+
+#### [Click to download from dropbox](https://www.dropbox.com/s/1kez3hpt3biqs97/wecon_delivery.zip?dl=1)
+(Files are encrypted and password protected)
+
+#### Contents
+* Images
+  * JPG_@1x
+    * Blueprint.jpg
+    * Smartphone.jpg
+    * Heart.jpg
+  * JPG_@2x
+    * Blueprint.jpg (2x)
+    * Smartphone.jpg (2x)
+    * Heart.jpg (2x)
+  * PNG_@1x
+    * Blueprint.png
+    * Smartphone.png
+    * Heart.png
+  * PNG_@2x
+    * Blueprint.png (2x)
+    * Smartphone.png (2x)
+    * Heart.png (2x)
+  * PNGA_@1x
+    * Blueprint.png
+    * Smartphone.png
+    * Heart.png
+  * PNGA_@2x
+    * Blueprint.png (2x)
+    * Smartphone.png (2x)
+    * Heart.png (2x)
+  * SVG
+    * Blueprint.svg
+    * Smartphone.svg
+    * Heart.svg
+* Video
+  * GIF
+    * logo-animation_400px.gif
+    * logo-animation_800px.gif
+  * MP4
+    * logo-animation_640p_square.mp4
+    * logo-animation_1080p_chroma.mp4
+    * logo-animation_1080p.mp4
+
 ## Follow Nerdmanship Custom
 * [Facebook](http://www.facebook.com/nerdmanship)
 * [Twitter](http://www.twitter.com/stromqvist)
 * [Dribbble](http://www.dribbble.com/stromqvist)
 * [Codepen](http://www.codepen.io/nerdmanship)
-
-## Tech spec
-* Size: 52 Kb including dependencies
-* Runs at 60 fps on both desktop and mobile
 
 ## License
 

@@ -1408,6 +1408,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/src\/scss\/_recording.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/dist\/scss\/_recording.css",
+		"oF": 1,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/src\/scss\/index.scss": {
 		"aP": 1,
 		"bl": 1,
@@ -1499,7 +1512,7 @@
 	"displayValue": "wecon",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-girlfriend",
-	"lastBuiltDate": 516027037
+	"lastBuiltDate": 516098269
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
