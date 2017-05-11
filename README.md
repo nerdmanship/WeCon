@@ -57,7 +57,7 @@ The main challenge here was to abstract the key value messages and convert them 
 
 3. **Initialise the animation** in your main js file, i.e. on page load, and pass the div ID as a string:
 
-`window.addEventListener("load", animateLogotypeIn("wrapper");`
+`window.addEventListener("load", animateLogotypeIn("wrapper"));`
 
 #### Further information
 You can position and style the div as you would with any normal image wrapper. The logotype will take the dimensions that you give the wrapper.
