@@ -1,41 +1,40 @@
 function animateLogo() {
-
   // CacheDOM
-  var svg = document.querySelector("#svg"),
-  all = svg.querySelector("#all"),
-  line = svg.querySelector("#line"),
-  symbol = svg.querySelector("#symbol"),
-  particleContainer = svg.querySelector("#particles"),
-  text0 = svg.querySelector("#WE"),
-  text1 = svg.querySelector("#Construction"),
-  mask = svg.querySelector("#text-mask"),
-  qualityParticle = svg.querySelector("#quality-particle"),
-  cloud2 = svg.querySelector("#cloud2"),
-  cloud = svg.querySelector("#cloud"),
-  verticalFrame = svg.querySelector("#vertical"),
-  horizontalFrame = svg.querySelector("#horizontal"),
-  mainBuilding = svg.querySelector("#main"),
-  baseBuilding = svg.querySelector("#base"),
-  topBuilding = svg.querySelector("#top"),
-  tipBuilding = svg.querySelector("#tip"),
-  maskStream1 = svg.querySelector("#data-mask1"),
-  maskStream2 = svg.querySelector("#data-mask2"),
-  maskStream3 = svg.querySelector("#data-mask3"),
-  maskStream4 = svg.querySelector("#data-mask4"),
-  smartphoneBtn = svg.querySelector("#button"),
-  heartline1 = svg.querySelector("#heartline1"),
-  heartline2 = svg.querySelector("#heartline2"),
-  logoline1 = svg.querySelector("#logoline1"),
-  logoline2 = svg.querySelector("#logoline2");
+  var svg = document.querySelector("[data-anim=svg]"),
+  all = svg.querySelector("[data-anim=all]"),
+  line = svg.querySelector("[data-anim=line]"),
+  symbol = svg.querySelector("[data-anim=symbol]"),
+  particleContainer = svg.querySelector("[data-anim=particles]"),
+  text0 = svg.querySelector("[data-anim=WE]"),
+  text1 = svg.querySelector("[data-anim=Construction]"),
+  mask = svg.querySelector("[data-anim=textMask]"),
+  qualityParticle = svg.querySelector("[data-anim=qualityParticle]"),
+  cloud2 = svg.querySelector("[data-anim=cloud2]"),
+  cloud = svg.querySelector("[data-anim=cloud]"),
+  verticalFrame = svg.querySelector("[data-anim=vertical]"),
+  horizontalFrame = svg.querySelector("[data-anim=horizontal]"),
+  mainBuilding = svg.querySelector("[data-anim=main]"),
+  baseBuilding = svg.querySelector("[data-anim=base]"),
+  topBuilding = svg.querySelector("[data-anim=top]"),
+  tipBuilding = svg.querySelector("[data-anim=tip]"),
+  maskStream1 = svg.querySelector("[data-anim=dataMask1]"),
+  maskStream2 = svg.querySelector("[data-anim=dataMask2]"),
+  maskStream3 = svg.querySelector("[data-anim=dataMask3]"),
+  maskStream4 = svg.querySelector("[data-anim=dataMask4]"),
+  smartphoneBtn = svg.querySelector("[data-anim=button]"),
+  heartline1 = svg.querySelector("[data-anim=heartline1]"),
+  heartline2 = svg.querySelector("[data-anim=heartline2]"),
+  logoline1 = svg.querySelector("[data-anim=logoline1]"),
+  logoline2 = svg.querySelector("[data-anim=logoline2]");
 
   var data = [];
   var ticks = [];
   var windows = [];
   var particles = [];
 
-  for(var i = 0; i < 4; i++) { data[i] = svg.querySelector("#data" + (i+1)); }
-  for(var i = 0; i < 12; i++) { ticks[i] = svg.querySelector("#measure-tick" + (i+1)); }
-  for(var i = 0; i < 40; i++) { windows[i] = svg.querySelector("#window" + (i+1)); }
+  for(var i = 0; i < 4; i++) { data[i] = svg.querySelector("[data-anim=data" + (i+1) + "]"); }
+  for(var i = 0; i < 12; i++) { ticks[i] = svg.querySelector("[data-anim=measureTick" + (i+1) + "]"); }
+  for(var i = 0; i < 40; i++) { windows[i] = svg.querySelector("[data-anim=window" + (i+1) + "]"); }
 
   function createParticles() {
 
@@ -67,7 +66,7 @@ function animateLogo() {
     TweenMax.set(all, { autoAlpha: 1 });
 
     // First path for main line
-    TweenMax.set(line, { attr: {d: blueprintFoundation} });
+    TweenMax.set(line, { attr: {d: blueprintFoundation}, drawSVG: "0%" });
 
     // Start position and scale for everything but texts
     TweenMax.set(symbol, { scale: 1.5, transformOrigin: "bottom left", x: 110 });
@@ -279,7 +278,7 @@ function animateLogo() {
 
       tl
           .add("intro")
-          .from(line, 0.8, { drawSVG:"0", ease: Power2.easeIn }, "intro")
+          .to(line, 0.8, { drawSVG:"100%", ease: Power2.easeIn }, "intro")
 
           // Up BLUEPRINT
           .add("blueprint")
