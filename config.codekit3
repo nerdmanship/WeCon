@@ -1264,15 +1264,6 @@
 		"sC": 1,
 		"tS": 1
 		},
-	"\/src\/js\/blueprint-details.js": {
-		"ft": 64,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "\/dist\/js\/blueprint-details.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 1
-		},
 	"\/src\/js\/index.js": {
 		"ft": 64,
 		"mi": 0,
@@ -1314,42 +1305,6 @@
 		"mi": 0,
 		"oA": 1,
 		"oAP": "\/dist\/js\/particleData.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 1
-		},
-	"\/src\/js\/playTimeline.js": {
-		"ft": 64,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "\/dist\/js\/playTimeline.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 1
-		},
-	"\/src\/js\/setStart.js": {
-		"ft": 64,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "\/dist\/js\/setStart.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 1
-		},
-	"\/src\/js\/smartphone-details.js": {
-		"ft": 64,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "\/dist\/js\/smartphone-details.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 1
-		},
-	"\/src\/js\/wecon-particles.js": {
-		"ft": 64,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "\/dist\/js\/wecon-particles.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 1
@@ -1512,7 +1467,7 @@
 	"displayValue": "wecon",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-girlfriend",
-	"lastBuiltDate": 516098269
+	"lastBuiltDate": 516254186
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
